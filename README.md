@@ -16,13 +16,7 @@ The Finite State Machine operates as a modulo-4 ring topology. Depending on the 
 * **Count Up Loop (`dir = 0`):** `00` $\rightarrow$ `01` $\rightarrow$ `10` $\rightarrow$ `11` $\rightarrow$ `00`
 * **Count Down Loop (`dir = 1`):** `00` $\rightarrow$ `11` $\rightarrow$ `10` $\rightarrow$ `01` $\rightarrow$ `00`
 
----
-# FSM Diagram BreakdownStates (Nodes): 
-The FSM has 4 distinct states, labeled s0 (00), s1 (01), s2 (10), and s3 (11). The output z directly mirrors the value of the current state.
-Global Reset: No matter what state the machine is currently in, asserting the reset signal (rst = 1) instantly breaks the loop on the next clock edge and forces the FSM back to s0.
-Count-Up Path (dir = 0): Following the clockwise transitions, 
-the counter moves forward sequentially:$$\text{s0} \rightarrow \text{s1} \rightarrow \text{s2} \rightarrow \text{s3} \rightarrow \text{s0}$$
-Count-Down Path (dir = 1): Following the counter-clockwise transitions, the counter moves backward sequentially:$$\text{s0} \rightarrow \text{s3} \rightarrow \text{s2} \rightarrow \text{s1} \rightarrow \text{s0}$$
+
 ---
 # Output Waveform
 <img width="1532" height="378" alt="image" src="https://github.com/user-attachments/assets/17edbc84-e948-4db0-a56b-597525704e49" />
